@@ -1,0 +1,421 @@
+body {
+    width: 1270px;
+    left: 50%;
+    margin-left: -635px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-width: 1500px;
+    position: relative;
+    top: 0px;
+    margin-top: 0;
+    padding-top: 21px;
+}
+
+.lingtang {
+    position: relative;
+}
+
+.zhaopian {
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    margin: 0 0 0 -150px;
+    overflow: hidden;
+    height: 375px;
+    top: 150px;
+}
+
+.lingtang .zhaopian img:nth-child(1) {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    margin: 0 0 0 -150px;
+    /* background: #fff; */
+    z-index: 2;
+}
+
+.lingtang .zhaopian img:nth-child(2) {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    margin: 0 0 0 -150px;
+    /* background: #fff; */
+    box-sizing: border-box;
+    padding: 38px;
+    background: #fff;
+    z-index: 1;
+    filter: grayscale(100%)!important;
+}
+
+.wanlian>div {
+    position: absolute;
+}
+
+.wanlian>.left, .wanlian>.right {
+    background: url('/assets/img/y.png');
+    background-size: 100% 100%;
+    width: 200px;
+    height: 667px;
+    top: 150px;
+    box-sizing: border-box;
+    padding: 70px;
+    font-size: 60px;
+    line-height: 45px;
+    font-family: LiSu;
+}
+
+.wanlian>.left {
+    left: 200px;
+}
+
+.wanlian>.right {
+    right: 200px;
+}
+
+body.play .wanlian>.right,body.play .wanlian>.left {
+    animation: douadou2 .01s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+.wanlian>.top {
+    background: url(/assets/img/x.png);
+    background-size: 100% 100%;
+    width: 500px;
+    height: 137px;
+    top: 10px;
+    left: 50%;
+    margin-left: -250px;
+    text-align: center;
+    font-size: 59px;
+    line-height: 13px;
+    font-family: LiSu;
+    box-sizing: border-box;
+    padding: 0 63px;
+}
+
+.wanlian>.top img {
+    width: 131px;
+    position: relative;
+    top: -4px;
+}
+
+.wanlian>.top p {
+}
+
+.wanlian>.top p:first-child {
+    float: left;
+}
+
+.wanlian>.top p:last-child {
+    float: right;
+}
+
+.yinxiang>div {
+    position: absolute;
+    width: 363px;
+    top: 379px;
+    transition: width .3s;
+}
+
+.yinxiang>.left {
+    left: 0px;
+}
+
+.yinxiang>.right {
+    right: 0px;
+    transform: rotateY(180deg);
+}
+
+.yinxiang>div>img {
+    width: 100%;
+}
+
+.yinxiang {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.wanlian {
+    position: relative;
+    z-index: 2;
+}
+
+.gif {
+    position: absolute;
+    top: 600px;
+    z-index: 2;
+    width: 760px;
+    height: 200px;
+    text-align: center;
+    left: 50%;
+    margin-left: -380px;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.gif img {
+    position: absolute;
+    bottom: 0px;
+    animation-play-state: paused;
+}
+
+.gif img:nth-child(1) {
+    left: 0px;
+}
+
+.gif img:nth-child(2) {
+    left: 170px;
+}
+
+.gif img:nth-child(3) {
+    left: 208px;
+}
+
+.gif img:nth-child(4) {
+    left: 385px;
+}
+
+.gif img:nth-child(5) {
+    left: 435px;
+}
+
+.background,.background img {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+}
+
+body.play * {
+    animation: bhd .2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+body.play .wanlian>.top img {
+    animation: zhuanazhuan 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+body.play .yinxiang>.left {
+    animation: yinxiang_l .2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+body.play .yinxiang>.right {
+    animation: yinxiang_r .2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+body.play .lingtang .zhaopian {
+    animation: douadou2 .05s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+body.play .gif {
+    opacity: 1;
+}
+
+body.play .wanlian>.top {
+    animation: daxiao .2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes yinxiang_r {
+    0% {
+        background-position-y: 0%;
+        width: 363px;
+        transform: rotateY(180deg) scale(1);
+    }
+
+    100% {
+        background-position-y: 100%;
+        width: 450px;
+        transform: rotateY(180deg) scale(1.5);
+    }
+}
+
+@keyframes yinxiang_l {
+    0% {
+        background-position-y: 0%;
+        width: 363px;
+        transform: scale(1);
+    }
+
+    100% {
+        background-position-y: 100%;
+        width: 450px;
+        transform: scale(1.5);
+    }
+}
+
+@keyframes bhd {
+    0% {
+        filter: contrast(100%);
+    }
+
+    100% {
+        filter: contrast(150%);
+    }
+}
+
+@keyframes zhuanazhuan {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes douadou {
+    0% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes douadou2 {
+    0% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+@keyframes daxiao {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+audio {
+    position: absolute;
+    left: 50%;
+    width: 400px;
+    margin-left: -200px;
+    top: 873px;
+    box-shadow: 0px 0px 9px 4px #FF5722;
+    background: #fff;
+}
+
+html {
+    background: #f00;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "\70b9\51fb\4efb\610f\4f4d\7f6e\5f00\59cb";
+    position: fixed;
+    font-size: 50px;
+    width: 500px;
+    left: 50%;
+    margin-left: -250px;
+    top: 700px;
+    z-index: 100000000;
+    background: #000;
+    color: red;
+    text-align: center;
+    line-height: 100px;
+}
+
+body.play::before {
+    display: none;
+}
+
+.github {
+    position: absolute;
+    left: 50%;
+    width: 400px;
+    margin-left: -200px;
+    top: 797px;
+    box-shadow: 0px 0px 9px 4px #F44336;
+    background: #0019a2;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    box-sizing: border-box;
+    font-family: LiSu;
+    font-size: 30px;
+}
+
+.github a {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    body {
+        width: 100%;
+        left: 0px;
+        margin-left: 0px;
+        overflow: hidden;
+    }
+
+    .yinxiang>div>img {
+        width: 50%;
+    }
+
+    .yinxiang>div {
+        top: 500px;
+    }
+
+    .wanlian>.left {
+        left: 0px;
+    }
+
+    .wanlian>.right {
+        right: 0px;
+    }
+
+    .background,.background img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+    }
+
+    .github {
+        width: 100%;
+        margin-left: 0px;
+        left: 0px;
+        font-size: 70px;
+        top: 850px;
+    }
+
+    audio {
+        width: 100%;
+        margin-left: 0px;
+        left: 0px;
+        font-size: 70px;
+        top: 1026px;
+    }
+}
